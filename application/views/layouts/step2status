@@ -1,0 +1,34 @@
+	            <td>
+					<?php 
+					$statusesArr = array(
+						'' => '',
+						'c' => 'C   - canceled',
+						'd' => 'D   - damaged',
+						'nr' => 'NR  - not received',
+						'pr' => 'PR  - partially received',
+						'r' => 'R   - received'
+					);
+					?>
+				    <select id="status<?= $i ?>" name="status[]" style="width:52px">
+						<?php foreach ($statusesArr as $id => $val) { ?>
+							<option value='<?= $id ?>' <?php if (isset($_SESSION['currentpo']['step2']['status'][$i-1]) && $_SESSION['currentpo']['step2']['status'][$i-1] == $id) { echo "selected"; }?>><?= $val ?></option>
+						<?php } ?>
+					</select>
+				</td>
+
+
+
+
+		        <td><?php 
+							
+							$statusesArr = array(
+							'' => '',
+							'c' => 'C   - canceled',
+							'd' => 'D   - damaged',
+							'nr' => 'NR  - not received',
+							'pr' => 'PR  - partially received',
+							'r' => 'R   - received'
+						);
+						?><?= $statusesArr[$_SESSION['currentpo']['step2']['status'][$i-1]] ?></td>
+
+

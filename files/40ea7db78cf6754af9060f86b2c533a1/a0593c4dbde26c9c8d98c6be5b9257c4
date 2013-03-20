@@ -1,0 +1,4 @@
+export P4USER=aoprisan
+export P4PORT=perforce.lycos.com:1666
+cd /web/sites/domains
+p4 login
